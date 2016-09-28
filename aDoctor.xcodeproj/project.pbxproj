@@ -7,27 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820688771D9B452A008C1B7C /* PatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 820688761D9B452A008C1B7C /* PatientVC.m */; };
+		8206887A1D9B8708008C1B7C /* ReviewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 820688791D9B8708008C1B7C /* ReviewsVC.m */; };
 		8225867E1D88C31D0047C716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8225867D1D88C31D0047C716 /* main.m */; };
 		822586811D88C31D0047C716 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822586801D88C31D0047C716 /* AppDelegate.m */; };
-		822586841D88C31D0047C716 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822586831D88C31D0047C716 /* ViewController.m */; };
 		822586871D88C31D0047C716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822586851D88C31D0047C716 /* Main.storyboard */; };
 		8225868A1D88C31D0047C716 /* aDoctor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 822586881D88C31D0047C716 /* aDoctor.xcdatamodeld */; };
 		8225868C1D88C31D0047C716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8225868B1D88C31D0047C716 /* Assets.xcassets */; };
 		8225868F1D88C31D0047C716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8225868D1D88C31D0047C716 /* LaunchScreen.storyboard */; };
+		82297E681D99D4290082E0AC /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82297E671D99D4290082E0AC /* LoginVC.m */; };
+		82297E6E1D9AC6870082E0AC /* PatientsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82297E6D1D9AC6870082E0AC /* PatientsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		820688751D9B452A008C1B7C /* PatientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientVC.h; sourceTree = "<group>"; };
+		820688761D9B452A008C1B7C /* PatientVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientVC.m; sourceTree = "<group>"; };
+		820688781D9B8708008C1B7C /* ReviewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsVC.h; sourceTree = "<group>"; };
+		820688791D9B8708008C1B7C /* ReviewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsVC.m; sourceTree = "<group>"; };
 		822586791D88C31D0047C716 /* aDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8225867D1D88C31D0047C716 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8225867F1D88C31D0047C716 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		822586801D88C31D0047C716 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		822586821D88C31D0047C716 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		822586831D88C31D0047C716 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		822586861D88C31D0047C716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		822586891D88C31D0047C716 /* aDoctor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aDoctor.xcdatamodel; sourceTree = "<group>"; };
 		8225868B1D88C31D0047C716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8225868E1D88C31D0047C716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822586901D88C31D0047C716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82297E661D99D4290082E0AC /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = ../LoginVC.h; sourceTree = "<group>"; };
+		82297E671D99D4290082E0AC /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = ../LoginVC.m; sourceTree = "<group>"; };
+		82297E6C1D9AC6870082E0AC /* PatientsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientsVC.h; sourceTree = "<group>"; };
+		82297E6D1D9AC6870082E0AC /* PatientsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +69,15 @@
 		8225867B1D88C31D0047C716 /* aDoctor */ = {
 			isa = PBXGroup;
 			children = (
-				8225867F1D88C31D0047C716 /* AppDelegate.h */,
-				822586801D88C31D0047C716 /* AppDelegate.m */,
-				822586821D88C31D0047C716 /* ViewController.h */,
-				822586831D88C31D0047C716 /* ViewController.m */,
 				822586851D88C31D0047C716 /* Main.storyboard */,
-				8225868B1D88C31D0047C716 /* Assets.xcassets */,
-				8225868D1D88C31D0047C716 /* LaunchScreen.storyboard */,
-				822586901D88C31D0047C716 /* Info.plist */,
-				822586881D88C31D0047C716 /* aDoctor.xcdatamodeld */,
+				82297E661D99D4290082E0AC /* LoginVC.h */,
+				82297E671D99D4290082E0AC /* LoginVC.m */,
+				82297E6C1D9AC6870082E0AC /* PatientsVC.h */,
+				82297E6D1D9AC6870082E0AC /* PatientsVC.m */,
+				820688751D9B452A008C1B7C /* PatientVC.h */,
+				820688761D9B452A008C1B7C /* PatientVC.m */,
+				820688781D9B8708008C1B7C /* ReviewsVC.h */,
+				820688791D9B8708008C1B7C /* ReviewsVC.m */,
 				8225867C1D88C31D0047C716 /* Supporting Files */,
 			);
 			path = aDoctor;
@@ -77,7 +86,13 @@
 		8225867C1D88C31D0047C716 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8225868B1D88C31D0047C716 /* Assets.xcassets */,
+				8225867F1D88C31D0047C716 /* AppDelegate.h */,
+				822586801D88C31D0047C716 /* AppDelegate.m */,
 				8225867D1D88C31D0047C716 /* main.m */,
+				8225868D1D88C31D0047C716 /* LaunchScreen.storyboard */,
+				822586901D88C31D0047C716 /* Info.plist */,
+				822586881D88C31D0047C716 /* aDoctor.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820688771D9B452A008C1B7C /* PatientVC.m in Sources */,
+				82297E6E1D9AC6870082E0AC /* PatientsVC.m in Sources */,
 				8225868A1D88C31D0047C716 /* aDoctor.xcdatamodeld in Sources */,
-				822586841D88C31D0047C716 /* ViewController.m in Sources */,
 				822586811D88C31D0047C716 /* AppDelegate.m in Sources */,
+				82297E681D99D4290082E0AC /* LoginVC.m in Sources */,
 				8225867E1D88C31D0047C716 /* main.m in Sources */,
+				8206887A1D9B8708008C1B7C /* ReviewsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diskander.aDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -292,6 +311,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diskander.aDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -314,6 +334,7 @@
 				822586951D88C31D0047C716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
