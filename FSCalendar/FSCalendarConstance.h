@@ -36,9 +36,9 @@ UIKIT_EXTERN NSInteger const FSCalendarDefaultHourComponent;
 #define FSCalendarDeviceIsIPad [[UIDevice currentDevice].model hasPrefix:@"iPad"]
 #endif
 
-#define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)
-#define FSCalendarStandardTodayColor       FSColorRGBA(198,51,42 ,1.0)
-#define FSCalendarStandardTitleTextColor   FSColorRGBA(14,69,221 ,1.0)
+#define FSCalendarStandardSelectionColor   FSColorRGBA(68,178,240,1.0)
+#define FSCalendarStandardTodayColor       FSColorRGBA(249,182,38 ,1.0)
+#define FSCalendarStandardTitleTextColor   FSColorRGBA(68,178,240,1.0)
 #define FSCalendarStandardEventDotColor    FSColorRGBA(31,119,219,0.75)
 
 #define FSCalendarStandardSeparatorColor   [[UIColor lightGrayColor] colorWithAlphaComponent:0.25]

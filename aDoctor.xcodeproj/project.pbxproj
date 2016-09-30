@@ -106,7 +106,6 @@
 		822586701D88C31D0047C716 = {
 			isa = PBXGroup;
 			children = (
-				824972B71D9DBC3800016A58 /* FSCalendar */,
 				8225867B1D88C31D0047C716 /* aDoctor */,
 				8225867A1D88C31D0047C716 /* Products */,
 			);
@@ -157,11 +156,12 @@
 		824972971D9D8F6000016A58 /* 3rd party code */ = {
 			isa = PBXGroup;
 			children = (
+				824972B71D9DBC3800016A58 /* Calendar */,
 			);
 			name = "3rd party code";
 			sourceTree = "<group>";
 		};
-		824972B71D9DBC3800016A58 /* FSCalendar */ = {
+		824972B71D9DBC3800016A58 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				824972B81D9DBC3800016A58 /* CALayer+FSExtension.h */,
@@ -198,7 +198,8 @@
 				824972D71D9DBC3800016A58 /* UIView+FSExtension.h */,
 				824972D81D9DBC3800016A58 /* UIView+FSExtension.m */,
 			);
-			path = FSCalendar;
+			name = Calendar;
+			path = ../FSCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
