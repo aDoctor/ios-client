@@ -35,6 +35,8 @@
 		824972E71D9DBC3800016A58 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824972D41D9DBC3800016A58 /* Info.plist */; };
 		824972E81D9DBC3800016A58 /* NSObject+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 824972D61D9DBC3800016A58 /* NSObject+FSExtension.m */; };
 		824972E91D9DBC3800016A58 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 824972D81D9DBC3800016A58 /* UIView+FSExtension.m */; };
+		827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */; };
+		827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7691DA1873A002EDFDB /* NewPatientVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,10 @@
 		824972D61D9DBC3800016A58 /* NSObject+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FSExtension.m"; sourceTree = "<group>"; };
 		824972D71D9DBC3800016A58 /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FSExtension.h"; sourceTree = "<group>"; };
 		824972D81D9DBC3800016A58 /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSExtension.m"; sourceTree = "<group>"; };
+		827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAppointmentVC.h; path = ../NewAppointmentVC.h; sourceTree = "<group>"; };
+		827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAppointmentVC.m; path = ../NewAppointmentVC.m; sourceTree = "<group>"; };
+		827DF7681DA1873A002EDFDB /* NewPatientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPatientVC.h; sourceTree = "<group>"; };
+		827DF7691DA1873A002EDFDB /* NewPatientVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPatientVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +133,12 @@
 				82297E671D99D4290082E0AC /* LoginVC.m */,
 				8249729A1D9DA32E00016A58 /* CalendarVC.h */,
 				8249729B1D9DA32E00016A58 /* CalendarVC.m */,
+				827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */,
+				827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */,
 				82297E6C1D9AC6870082E0AC /* PatientsVC.h */,
 				82297E6D1D9AC6870082E0AC /* PatientsVC.m */,
+				827DF7681DA1873A002EDFDB /* NewPatientVC.h */,
+				827DF7691DA1873A002EDFDB /* NewPatientVC.m */,
 				820688751D9B452A008C1B7C /* PatientVC.h */,
 				820688761D9B452A008C1B7C /* PatientVC.m */,
 				820688781D9B8708008C1B7C /* ReviewsVC.h */,
@@ -279,6 +289,7 @@
 				824972E21D9DBC3800016A58 /* FSCalendarEventIndicator.m in Sources */,
 				824972E51D9DBC3800016A58 /* FSCalendarScopeHandle.m in Sources */,
 				824972DA1D9DBC3800016A58 /* FSCalendar+Deprecated.m in Sources */,
+				827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */,
 				824972E61D9DBC3800016A58 /* FSCalendarStickyHeader.m in Sources */,
 				824972E81D9DBC3800016A58 /* NSObject+FSExtension.m in Sources */,
 				824972DC1D9DBC3800016A58 /* FSCalendar.m in Sources */,
@@ -297,6 +308,7 @@
 				8225867E1D88C31D0047C716 /* main.m in Sources */,
 				8206887A1D9B8708008C1B7C /* ReviewsVC.m in Sources */,
 				824972E41D9DBC3800016A58 /* FSCalendarHeader.m in Sources */,
+				827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */,
 				824972E01D9DBC3800016A58 /* FSCalendarCollectionView.m in Sources */,
 				824972E31D9DBC3800016A58 /* FSCalendarFlowLayout.m in Sources */,
 			);
