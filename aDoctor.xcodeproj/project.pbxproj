@@ -37,6 +37,7 @@
 		824972E91D9DBC3800016A58 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 824972D81D9DBC3800016A58 /* UIView+FSExtension.m */; };
 		827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */; };
 		827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7691DA1873A002EDFDB /* NewPatientVC.m */; };
+		827DF76D1DA2B01E002EDFDB /* NewAppointmentReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAppointmentVC.m; path = ../NewAppointmentVC.m; sourceTree = "<group>"; };
 		827DF7681DA1873A002EDFDB /* NewPatientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPatientVC.h; sourceTree = "<group>"; };
 		827DF7691DA1873A002EDFDB /* NewPatientVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPatientVC.m; sourceTree = "<group>"; };
+		827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointmentReminderCell.h; sourceTree = "<group>"; };
+		827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointmentReminderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				8249729B1D9DA32E00016A58 /* CalendarVC.m */,
 				827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */,
 				827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */,
+				827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */,
+				827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */,
 				82297E6C1D9AC6870082E0AC /* PatientsVC.h */,
 				82297E6D1D9AC6870082E0AC /* PatientsVC.m */,
 				827DF7681DA1873A002EDFDB /* NewPatientVC.h */,
@@ -307,6 +312,7 @@
 				82297E681D99D4290082E0AC /* LoginVC.m in Sources */,
 				8225867E1D88C31D0047C716 /* main.m in Sources */,
 				8206887A1D9B8708008C1B7C /* ReviewsVC.m in Sources */,
+				827DF76D1DA2B01E002EDFDB /* NewAppointmentReminderCell.m in Sources */,
 				824972E41D9DBC3800016A58 /* FSCalendarHeader.m in Sources */,
 				827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */,
 				824972E01D9DBC3800016A58 /* FSCalendarCollectionView.m in Sources */,
