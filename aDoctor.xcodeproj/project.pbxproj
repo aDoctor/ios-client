@@ -38,6 +38,7 @@
 		827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */; };
 		827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7691DA1873A002EDFDB /* NewPatientVC.m */; };
 		827DF76D1DA2B01E002EDFDB /* NewAppointmentReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */; };
+		8280B5B11DA4075300E92A8D /* PatientVisitReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8280B5B01DA4075300E92A8D /* PatientVisitReportVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		827DF7691DA1873A002EDFDB /* NewPatientVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPatientVC.m; sourceTree = "<group>"; };
 		827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointmentReminderCell.h; sourceTree = "<group>"; };
 		827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointmentReminderCell.m; sourceTree = "<group>"; };
+		8280B5AF1DA4075300E92A8D /* PatientVisitReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientVisitReportVC.h; sourceTree = "<group>"; };
+		8280B5B01DA4075300E92A8D /* PatientVisitReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientVisitReportVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				827DF7691DA1873A002EDFDB /* NewPatientVC.m */,
 				820688751D9B452A008C1B7C /* PatientVC.h */,
 				820688761D9B452A008C1B7C /* PatientVC.m */,
+				8280B5AF1DA4075300E92A8D /* PatientVisitReportVC.h */,
+				8280B5B01DA4075300E92A8D /* PatientVisitReportVC.m */,
 				820688781D9B8708008C1B7C /* ReviewsVC.h */,
 				820688791D9B8708008C1B7C /* ReviewsVC.m */,
 				824972971D9D8F6000016A58 /* 3rd party code */,
@@ -296,6 +301,7 @@
 				824972DA1D9DBC3800016A58 /* FSCalendar+Deprecated.m in Sources */,
 				827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */,
 				824972E61D9DBC3800016A58 /* FSCalendarStickyHeader.m in Sources */,
+				8280B5B11DA4075300E92A8D /* PatientVisitReportVC.m in Sources */,
 				824972E81D9DBC3800016A58 /* NSObject+FSExtension.m in Sources */,
 				824972DC1D9DBC3800016A58 /* FSCalendar.m in Sources */,
 				824972DB1D9DBC3800016A58 /* FSCalendar+IBExtension.m in Sources */,
