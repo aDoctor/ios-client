@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PatientVC : UIViewController
+@property NSString *name;
+@property NSString *age;
+@property NSString *insurance;
+@property NSString *gender;
 
 @end

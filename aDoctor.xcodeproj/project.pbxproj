@@ -35,6 +35,11 @@
 		824972E71D9DBC3800016A58 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824972D41D9DBC3800016A58 /* Info.plist */; };
 		824972E81D9DBC3800016A58 /* NSObject+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 824972D61D9DBC3800016A58 /* NSObject+FSExtension.m */; };
 		824972E91D9DBC3800016A58 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 824972D81D9DBC3800016A58 /* UIView+FSExtension.m */; };
+		825E81D11DA84DA90059B82F /* FigureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D01DA84DA90059B82F /* FigureVC.m */; };
+		825E81D41DA84FF20059B82F /* NotesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D31DA84FF20059B82F /* NotesVC.m */; };
+		825E81D71DA8500F0059B82F /* DrugsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D61DA8500F0059B82F /* DrugsVC.m */; };
+		825E81DA1DA850220059B82F /* PharmacyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D91DA850220059B82F /* PharmacyVC.m */; };
+		825E81DD1DABFC9A0059B82F /* PatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81DC1DABFC9A0059B82F /* PatientCell.m */; };
 		827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */; };
 		827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7691DA1873A002EDFDB /* NewPatientVC.m */; };
 		827DF76D1DA2B01E002EDFDB /* NewAppointmentReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */; };
@@ -94,6 +99,16 @@
 		824972D61D9DBC3800016A58 /* NSObject+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FSExtension.m"; sourceTree = "<group>"; };
 		824972D71D9DBC3800016A58 /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FSExtension.h"; sourceTree = "<group>"; };
 		824972D81D9DBC3800016A58 /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSExtension.m"; sourceTree = "<group>"; };
+		825E81CF1DA84DA90059B82F /* FigureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FigureVC.h; sourceTree = "<group>"; };
+		825E81D01DA84DA90059B82F /* FigureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FigureVC.m; sourceTree = "<group>"; };
+		825E81D21DA84FF20059B82F /* NotesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesVC.h; sourceTree = "<group>"; };
+		825E81D31DA84FF20059B82F /* NotesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesVC.m; sourceTree = "<group>"; };
+		825E81D51DA8500F0059B82F /* DrugsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsVC.h; sourceTree = "<group>"; };
+		825E81D61DA8500F0059B82F /* DrugsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsVC.m; sourceTree = "<group>"; };
+		825E81D81DA850220059B82F /* PharmacyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PharmacyVC.h; sourceTree = "<group>"; };
+		825E81D91DA850220059B82F /* PharmacyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmacyVC.m; sourceTree = "<group>"; };
+		825E81DB1DABFC9A0059B82F /* PatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientCell.h; sourceTree = "<group>"; };
+		825E81DC1DABFC9A0059B82F /* PatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientCell.m; sourceTree = "<group>"; };
 		827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAppointmentVC.h; path = ../NewAppointmentVC.h; sourceTree = "<group>"; };
 		827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAppointmentVC.m; path = ../NewAppointmentVC.m; sourceTree = "<group>"; };
 		827DF7681DA1873A002EDFDB /* NewPatientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPatientVC.h; sourceTree = "<group>"; };
@@ -137,22 +152,9 @@
 				822586851D88C31D0047C716 /* Main.storyboard */,
 				82297E661D99D4290082E0AC /* LoginVC.h */,
 				82297E671D99D4290082E0AC /* LoginVC.m */,
-				8249729A1D9DA32E00016A58 /* CalendarVC.h */,
-				8249729B1D9DA32E00016A58 /* CalendarVC.m */,
-				827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */,
-				827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */,
-				827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */,
-				827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */,
-				82297E6C1D9AC6870082E0AC /* PatientsVC.h */,
-				82297E6D1D9AC6870082E0AC /* PatientsVC.m */,
-				827DF7681DA1873A002EDFDB /* NewPatientVC.h */,
-				827DF7691DA1873A002EDFDB /* NewPatientVC.m */,
-				820688751D9B452A008C1B7C /* PatientVC.h */,
-				820688761D9B452A008C1B7C /* PatientVC.m */,
-				8280B5AF1DA4075300E92A8D /* PatientVisitReportVC.h */,
-				8280B5B01DA4075300E92A8D /* PatientVisitReportVC.m */,
-				820688781D9B8708008C1B7C /* ReviewsVC.h */,
-				820688791D9B8708008C1B7C /* ReviewsVC.m */,
+				825E81CE1DA84D1E0059B82F /* Calendar */,
+				825E81CC1DA84CDE0059B82F /* Patient */,
+				825E81CD1DA84D020059B82F /* Reviews */,
 				824972971D9D8F6000016A58 /* 3rd party code */,
 				8225867C1D88C31D0047C716 /* Supporting Files */,
 			);
@@ -220,6 +222,53 @@
 			);
 			name = Calendar;
 			path = ../FSCalendar;
+			sourceTree = "<group>";
+		};
+		825E81CC1DA84CDE0059B82F /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				82297E6C1D9AC6870082E0AC /* PatientsVC.h */,
+				82297E6D1D9AC6870082E0AC /* PatientsVC.m */,
+				825E81DB1DABFC9A0059B82F /* PatientCell.h */,
+				825E81DC1DABFC9A0059B82F /* PatientCell.m */,
+				827DF7681DA1873A002EDFDB /* NewPatientVC.h */,
+				827DF7691DA1873A002EDFDB /* NewPatientVC.m */,
+				820688751D9B452A008C1B7C /* PatientVC.h */,
+				820688761D9B452A008C1B7C /* PatientVC.m */,
+				8280B5AF1DA4075300E92A8D /* PatientVisitReportVC.h */,
+				8280B5B01DA4075300E92A8D /* PatientVisitReportVC.m */,
+				825E81CF1DA84DA90059B82F /* FigureVC.h */,
+				825E81D01DA84DA90059B82F /* FigureVC.m */,
+				825E81D21DA84FF20059B82F /* NotesVC.h */,
+				825E81D31DA84FF20059B82F /* NotesVC.m */,
+				825E81D51DA8500F0059B82F /* DrugsVC.h */,
+				825E81D61DA8500F0059B82F /* DrugsVC.m */,
+				825E81D81DA850220059B82F /* PharmacyVC.h */,
+				825E81D91DA850220059B82F /* PharmacyVC.m */,
+			);
+			name = Patient;
+			sourceTree = "<group>";
+		};
+		825E81CD1DA84D020059B82F /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				820688781D9B8708008C1B7C /* ReviewsVC.h */,
+				820688791D9B8708008C1B7C /* ReviewsVC.m */,
+			);
+			name = Reviews;
+			sourceTree = "<group>";
+		};
+		825E81CE1DA84D1E0059B82F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8249729A1D9DA32E00016A58 /* CalendarVC.h */,
+				8249729B1D9DA32E00016A58 /* CalendarVC.m */,
+				827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */,
+				827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */,
+				827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */,
+				827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,10 +359,15 @@
 				824972DE1D9DBC3800016A58 /* FSCalendarAppearance.m in Sources */,
 				824972E11D9DBC3800016A58 /* FSCalendarConstance.m in Sources */,
 				8249729C1D9DA32E00016A58 /* CalendarVC.m in Sources */,
+				825E81D11DA84DA90059B82F /* FigureVC.m in Sources */,
+				825E81D41DA84FF20059B82F /* NotesVC.m in Sources */,
 				824972DD1D9DBC3800016A58 /* FSCalendarAnimator.m in Sources */,
 				824972DF1D9DBC3800016A58 /* FSCalendarCell.m in Sources */,
+				825E81D71DA8500F0059B82F /* DrugsVC.m in Sources */,
 				8225868A1D88C31D0047C716 /* aDoctor.xcdatamodeld in Sources */,
+				825E81DA1DA850220059B82F /* PharmacyVC.m in Sources */,
 				822586811D88C31D0047C716 /* AppDelegate.m in Sources */,
+				825E81DD1DABFC9A0059B82F /* PatientCell.m in Sources */,
 				824972E91D9DBC3800016A58 /* UIView+FSExtension.m in Sources */,
 				82297E681D99D4290082E0AC /* LoginVC.m in Sources */,
 				8225867E1D88C31D0047C716 /* main.m in Sources */,

@@ -35,6 +35,7 @@
     self.notesVC.alpha = 0;
     self.drugsVC.alpha = 0;
     self.pharmacyVC.alpha = 0;
+    self.title = @"Figure";
     
 }
 
@@ -50,6 +51,7 @@
     self.notesVC.alpha = 0;
     self.drugsVC.alpha = 0;
     self.pharmacyVC.alpha = 0;
+    self.title = @"Figure";
 }
 
 
@@ -59,6 +61,7 @@
     self.notesVC.alpha = 1.0;
     self.drugsVC.alpha = 0;
     self.pharmacyVC.alpha = 0;
+    self.title = @"Notes";
 }
 
 
@@ -68,6 +71,7 @@
     self.notesVC.alpha = 0;
     self.drugsVC.alpha = 1.0;
     self.pharmacyVC.alpha = 0;
+    self.title = @"Drugs";
 }
 
 
@@ -77,6 +81,7 @@
     self.notesVC.alpha = 0;
     self.drugsVC.alpha = 0;
     self.pharmacyVC.alpha = 1.0;
+    self.title = @"Pharmacy";
 }
 
 @end
