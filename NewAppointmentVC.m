@@ -12,6 +12,7 @@
 @interface NewAppointmentVC ()<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 @property NSArray *patient;
 @property NSArray *scheduledFollowUp;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
 
 
 @end
@@ -21,8 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Data
     self.patient = @[@"Dave William", @"John Jone's", @"Jose Diaz"];
     self.scheduledFollowUp = @[@"Oct 3rd, 2016", @"Oct 4th, 2016", @"Oct 4th, 2016"];
+    
+    //Go button style
+    self.goButton.layer.cornerRadius = 5;
+    self.goButton.clipsToBounds = YES;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -42,7 +49,6 @@
 
 -(void)showAlert
 {
-    NSLog(@"hello");
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirmation" message:@"You are about to send a reminder to patient" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *sendAction = [UIAlertAction actionWithTitle:@"Send" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -51,6 +57,12 @@
     [alert addAction:sendAction];
     [alert addAction:cancelAction];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+
+- (IBAction)onGoButtonPressed:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"AddAppointment" sender:nil];
 }
 
 

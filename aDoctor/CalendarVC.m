@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSArray *patients;
 @property NSArray *times;
+@property (weak, nonatomic) IBOutlet FSCalendar *calendar;
 
 @end
 
@@ -27,6 +28,7 @@
     [super viewDidLoad];
     self.patients = @[@"David Alex", @"John Wood", @"Eli Luther", @"Mary King"];
     self.times = @[@"9:00am", @"9:30", @"11:00am", @"12:30"];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

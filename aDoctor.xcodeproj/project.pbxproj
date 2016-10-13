@@ -11,7 +11,6 @@
 		8206887A1D9B8708008C1B7C /* ReviewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 820688791D9B8708008C1B7C /* ReviewsVC.m */; };
 		8225867E1D88C31D0047C716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8225867D1D88C31D0047C716 /* main.m */; };
 		822586811D88C31D0047C716 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822586801D88C31D0047C716 /* AppDelegate.m */; };
-		822586871D88C31D0047C716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822586851D88C31D0047C716 /* Main.storyboard */; };
 		8225868A1D88C31D0047C716 /* aDoctor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 822586881D88C31D0047C716 /* aDoctor.xcdatamodeld */; };
 		8225868C1D88C31D0047C716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8225868B1D88C31D0047C716 /* Assets.xcassets */; };
 		8225868F1D88C31D0047C716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8225868D1D88C31D0047C716 /* LaunchScreen.storyboard */; };
@@ -40,6 +39,8 @@
 		825E81D71DA8500F0059B82F /* DrugsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D61DA8500F0059B82F /* DrugsVC.m */; };
 		825E81DA1DA850220059B82F /* PharmacyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81D91DA850220059B82F /* PharmacyVC.m */; };
 		825E81DD1DABFC9A0059B82F /* PatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81DC1DABFC9A0059B82F /* PatientCell.m */; };
+		825E81E31DAD59B70059B82F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825E81E11DAD59B70059B82F /* Main.storyboard */; };
+		825E81E81DAE04E10059B82F /* AddNewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 825E81E71DAE04E10059B82F /* AddNewAppointmentVC.m */; };
 		827DF7651DA0A136002EDFDB /* NewAppointmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */; };
 		827DF76A1DA1873A002EDFDB /* NewPatientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF7691DA1873A002EDFDB /* NewPatientVC.m */; };
 		827DF76D1DA2B01E002EDFDB /* NewAppointmentReminderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */; };
@@ -55,7 +56,6 @@
 		8225867D1D88C31D0047C716 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8225867F1D88C31D0047C716 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		822586801D88C31D0047C716 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		822586861D88C31D0047C716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		822586891D88C31D0047C716 /* aDoctor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aDoctor.xcdatamodel; sourceTree = "<group>"; };
 		8225868B1D88C31D0047C716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8225868E1D88C31D0047C716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,6 +109,9 @@
 		825E81D91DA850220059B82F /* PharmacyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PharmacyVC.m; sourceTree = "<group>"; };
 		825E81DB1DABFC9A0059B82F /* PatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientCell.h; sourceTree = "<group>"; };
 		825E81DC1DABFC9A0059B82F /* PatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientCell.m; sourceTree = "<group>"; };
+		825E81E21DAD59B70059B82F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		825E81E61DAE04E10059B82F /* AddNewAppointmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewAppointmentVC.h; sourceTree = "<group>"; };
+		825E81E71DAE04E10059B82F /* AddNewAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewAppointmentVC.m; sourceTree = "<group>"; };
 		827DF7631DA0A136002EDFDB /* NewAppointmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAppointmentVC.h; path = ../NewAppointmentVC.h; sourceTree = "<group>"; };
 		827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAppointmentVC.m; path = ../NewAppointmentVC.m; sourceTree = "<group>"; };
 		827DF7681DA1873A002EDFDB /* NewPatientVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPatientVC.h; sourceTree = "<group>"; };
@@ -149,9 +152,8 @@
 		8225867B1D88C31D0047C716 /* aDoctor */ = {
 			isa = PBXGroup;
 			children = (
-				822586851D88C31D0047C716 /* Main.storyboard */,
-				82297E661D99D4290082E0AC /* LoginVC.h */,
-				82297E671D99D4290082E0AC /* LoginVC.m */,
+				825E81E11DAD59B70059B82F /* Main.storyboard */,
+				825E81E91DAF0A740059B82F /* Login */,
 				825E81CE1DA84D1E0059B82F /* Calendar */,
 				825E81CC1DA84CDE0059B82F /* Patient */,
 				825E81CD1DA84D020059B82F /* Reviews */,
@@ -267,8 +269,19 @@
 				827DF7641DA0A136002EDFDB /* NewAppointmentVC.m */,
 				827DF76B1DA2B01E002EDFDB /* NewAppointmentReminderCell.h */,
 				827DF76C1DA2B01E002EDFDB /* NewAppointmentReminderCell.m */,
+				825E81E61DAE04E10059B82F /* AddNewAppointmentVC.h */,
+				825E81E71DAE04E10059B82F /* AddNewAppointmentVC.m */,
 			);
 			name = Calendar;
+			sourceTree = "<group>";
+		};
+		825E81E91DAF0A740059B82F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				82297E661D99D4290082E0AC /* LoginVC.h */,
+				82297E671D99D4290082E0AC /* LoginVC.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +346,7 @@
 				824972E71D9DBC3800016A58 /* Info.plist in Resources */,
 				8225868F1D88C31D0047C716 /* LaunchScreen.storyboard in Resources */,
 				8225868C1D88C31D0047C716 /* Assets.xcassets in Resources */,
-				822586871D88C31D0047C716 /* Main.storyboard in Resources */,
+				825E81E31DAD59B70059B82F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +372,7 @@
 				824972DE1D9DBC3800016A58 /* FSCalendarAppearance.m in Sources */,
 				824972E11D9DBC3800016A58 /* FSCalendarConstance.m in Sources */,
 				8249729C1D9DA32E00016A58 /* CalendarVC.m in Sources */,
+				825E81E81DAE04E10059B82F /* AddNewAppointmentVC.m in Sources */,
 				825E81D11DA84DA90059B82F /* FigureVC.m in Sources */,
 				825E81D41DA84FF20059B82F /* NotesVC.m in Sources */,
 				824972DD1D9DBC3800016A58 /* FSCalendarAnimator.m in Sources */,
@@ -383,20 +397,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		822586851D88C31D0047C716 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				822586861D88C31D0047C716 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8225868D1D88C31D0047C716 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8225868E1D88C31D0047C716 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		825E81E11DAD59B70059B82F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				825E81E21DAD59B70059B82F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
