@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface LoginVC ()<UITextFieldDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -66,5 +67,40 @@
     [self validateEmailWithString:self.emailTextField.text];
     return [self.emailTextField resignFirstResponder];
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    LAContext *myContext = [[LAContext alloc] init];
+    NSError *authError = nil;
+    NSString *myLocalizedReasonString = @"Please login";
+    
+    if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        [myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                  localizedReason:myLocalizedReasonString
+                            reply:^(BOOL success, NSError *error) {
+                                if (success) {
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        [self performSegueWithIdentifier:@"Success" sender:nil];
+                                    });
+                                } else {
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please try to login manually." preferredStyle:UIAlertControllerStyleAlert];
+                                        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                                        [alertController addAction:ok];
+                                        [self presentViewController:alertController animated:YES completion:nil];
+                                        NSLog(@"Switch to fall back authentication - ie, display a keypad or password entry box");
+                                    });
+                                }
+                            }];
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please try to login manually." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            [self presentViewController:alertController animated:YES completion:nil];
+        });
+    }
+}
+
+
 
 @end
