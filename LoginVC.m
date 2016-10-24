@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
 @end
 
@@ -23,8 +24,12 @@
     [self.view resignFirstResponder];
     [self.emailTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
+    
     self.signinButton.layer.cornerRadius = 5;
     self.signinButton.clipsToBounds = YES;
+    
+    self.logoImage.layer.cornerRadius = 20;
+    self.logoImage.clipsToBounds = YES;
 }
 
 - (BOOL)validateEmailWithString:(NSString*)email

@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    
+    // Get request, just for testing
+    //    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    //    [request setURL:[NSURL URLWithString:@"https://adoctor.herokuapp.com/api/reviews"]];
+    //    [request setHTTPMethod:@"GET"];
+    //
+    //    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    //    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    //        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    //        NSLog(@"requestReply: %@", requestReply);
+    //    }] resume];
+    //
+    //    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

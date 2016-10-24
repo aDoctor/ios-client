@@ -16,6 +16,7 @@
 @property NSArray *patientsInsuranceArray;
 @property NSArray *patientsAgeArray;
 @property NSArray *patientsGenderArray;
+@property NSMutableArray *results;
 
 @end
 
@@ -24,6 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Get patients
+    [self getPatientsDate];
+    NSLog(@"this is my json data: %@", self.results);
+
+
+    
+    //Setup the view
+    
     self.patientsArray = @[@"David Alex", @"John Wood", @"Eli Luther", @"Mary King", @"Chris Gato", @"Aaron John", @"Barbra wood"];
     self.patientsGenderArray = @[@"Male", @"Male",@"Female",@"Female",@"Male",@"Male",@"Female"];
     self.patientsInsuranceArray = @[@"Kaiser Permenente", @"Anthem Blue cross", @"Blue Shield", @"Medical", @"Medicare", @"Kaiser Permenente", @"Anthem Blue cross"];
@@ -31,6 +40,28 @@
 }
 
 
+-(void)getPatientsDate{
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"https://adoctor.herokuapp.com/api/user"]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+     
+        NSLog(@"requestReply: %@", requestReply);
+        
+    }] resume];
+    
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    
+    
+    
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PatientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
