@@ -12,11 +12,10 @@
 
 @interface PatientsVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property NSArray *patientsArray;
-@property NSArray *patientsInsuranceArray;
-@property NSArray *patientsAgeArray;
-@property NSArray *patientsGenderArray;
-@property NSMutableArray *results;
+@property NSMutableArray *patientsArray;
+@property NSMutableArray *patientsInsuranceArray;
+@property NSMutableArray *patientsAgeArray;
+@property NSMutableArray *patientsGenderArray;
 
 @end
 
@@ -26,17 +25,13 @@
     [super viewDidLoad];
     
     //Get patients
+    self.patientsArray = [NSMutableArray new];
+    self.patientsAgeArray = [NSMutableArray new];
+    self.patientsInsuranceArray = [NSMutableArray new];
+    self.patientsGenderArray = [NSMutableArray new];
+    
     [self getPatientsDate];
-    NSLog(@"this is my json data: %@", self.results);
 
-
-    
-    //Setup the view
-    
-    self.patientsArray = @[@"David Alex", @"John Wood", @"Eli Luther", @"Mary King", @"Chris Gato", @"Aaron John", @"Barbra wood"];
-    self.patientsGenderArray = @[@"Male", @"Male",@"Female",@"Female",@"Male",@"Male",@"Female"];
-    self.patientsInsuranceArray = @[@"Kaiser Permenente", @"Anthem Blue cross", @"Blue Shield", @"Medical", @"Medicare", @"Kaiser Permenente", @"Anthem Blue cross"];
-    self.patientsAgeArray = @[@"30", @"35", @"40", @"28", @"51", @"39", @"19"];
 }
 
 
@@ -48,26 +43,43 @@
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-     
-        NSLog(@"requestReply: %@", requestReply);
         
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSLog(@"%@", jsonArray);
+        
+        for (NSDictionary *diction in jsonArray) {
+        
+            NSString *firstName = [diction objectForKey:@"firstName"];
+            NSString *lastName = [diction objectForKey:@"lastName"];
+            NSString *name = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+            
+            NSString *gender = [diction objectForKey:@"gender"];
+            NSString *insurance = [diction objectForKey:@"_insurancePlanID"];
+            NSString *dob = [diction objectForKey:@"birthdate"];
+            
+            [self.patientsArray addObject:name];
+            [self.patientsGenderArray addObject:gender];
+            [self.patientsInsuranceArray addObject:insurance];
+            [self.patientsAgeArray addObject:dob];
+            
+            NSLog(@"%@",diction);
+            [self.tableView reloadData];
+        }
+
     }] resume];
     
     
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
-    
-    
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PatientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    PatientCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PatientCell" forIndexPath:indexPath];
     //cell.patientImage.image = [self.patients
     cell.profileName.text = [self.patientsArray objectAtIndex:indexPath.row];
     cell.profileDetails.text = [NSString stringWithFormat:@"%@ | %@ | %@", [self.patientsGenderArray objectAtIndex:indexPath.row], [self.patientsAgeArray objectAtIndex:indexPath.row], [self.patientsInsuranceArray objectAtIndex:indexPath.row]];
+    //[self.tableView reloadData];
     return cell;
 }
 
@@ -79,7 +91,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"patient"])
+    if ([segue.identifier isEqualToString:@"PatientProfile"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         PatientVC *dVC = segue.destinationViewController;

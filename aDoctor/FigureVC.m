@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *figureBodyTypeSegmentControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *bodySideSegmentControl;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property UIImage *finalImage;
+@property CGPoint *point;
 
 @end
 
@@ -21,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
 }
 
@@ -61,6 +62,23 @@
         self.image.image = [UIImage imageNamed:@"lower-muscles-back"];
         NSLog(@"lower-muscles-front");
     }
+    
+    [FigureVC drawImage:self.image.image inImage:self.finalImage atPoint:*(self.point)];
+
+}
+
+
++(UIImage*) drawImage:(UIImage*) fgImage
+              inImage:(UIImage*) bgImage
+              atPoint:(CGPoint)  point
+{
+    UIGraphicsBeginImageContextWithOptions(bgImage.size, FALSE, 0.0);
+    [bgImage drawInRect:CGRectMake( 0, 0, bgImage.size.width, bgImage.size.height)];
+    [fgImage drawInRect:CGRectMake( point.x, point.y, fgImage.size.width, fgImage.size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 

@@ -22,13 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *insuranceTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderControl;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property NSString *mrn;
-@property NSString *firstName;
-@property NSString *lastName;
-@property NSString *email;
-@property NSString *contactNumber;
 @property BOOL isMale;
-@property NSString *insurance;
 @property NSString *dateOfBirth;
 @property NSString *dateStr;
 
@@ -190,14 +184,23 @@
 
 
          
-
-
 #pragma mark - Saving data to cloud
-- (IBAction)onSaveButtonPressed:(id *)sender {
+
+- (IBAction)onSaveButtonPressed:(UIBarButtonItem *)sender { 
     
-    if (self.mrnTextField.text || self.firstNameTextField.text || self.lastNameTextField.text || self.emailTextField.text ||
-        self.contactNumberTextField.text || [self.insuranceTextField.text  isEqual: @""])
+    if (self.genderControl.selectedSegmentIndex == 0) {
+        self.isMale = YES;
+    }
+    if (self.genderControl.selectedSegmentIndex == 1){
+        self.isMale = NO;
+    }
+    
+    
+    if ([self.mrnTextField.text isEqualToString:@""] || [self.firstNameTextField.text isEqualToString:@"" ]
+      || [self.lastNameTextField.text isEqualToString:@""] || [self.emailTextField.text isEqualToString:@""]
+      || [self.insuranceTextField.text  isEqualToString:@""])
     {
+
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please complete all fields." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -206,26 +209,6 @@
     
     else{
         
-        if (self.genderControl.selectedSegmentIndex == 0) {
-            self.isMale = YES;
-        }
-        if (self.genderControl.selectedSegmentIndex == 1){
-            self.isMale = NO;
-        }
-        
-        
-        self.mrn = self.mrnTextField.text;
-        self.firstName =self.firstNameTextField.text;
-        self.lastName = self.lastNameTextField.text;
-        self.email = self.emailTextField.text;
-        self.contactNumber = self.contactNumberTextField.text;
-        self.insurance = self.insuranceTextField.text;
-        
-        NSLog(@"%@ %@ %@ %@ %d", self.firstName, self.email,self.contactNumber, self.dateOfBirth, self.isMale);
-        
-        
-        
-        
         //Fresh Post
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:@"https://adoctor.herokuapp.com/api/user"]];
@@ -233,11 +216,14 @@
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
         NSMutableDictionary *tmpJson = [NSMutableDictionary new];
-        tmpJson[@"name"] = [NSString stringWithFormat:@"%@ %@",self.firstName, self.lastName];
-        tmpJson[@"email"] = self.email;
-        tmpJson[@"phoneNumber"] = self.contactNumber;
+        tmpJson[@"MRN"] = self.mrnTextField.text;
+        tmpJson[@"firstName"] = self.firstNameTextField.text;
+        tmpJson[@"lastName"] = self.lastNameTextField.text;
+        tmpJson[@"email"] = self.emailTextField.text;
+        tmpJson[@"phoneNumber"] = self.contactNumberTextField.text;
         tmpJson[@"birthdate"] = self.dateOfBirth;
         tmpJson [@"gender"] = [NSNumber numberWithBool:self.isMale];
+        tmpJson [@"_insurancePlanID"] = self.insuranceTextField.text;
         
         NSError *error;
         NSData *postData = [NSJSONSerialization dataWithJSONObject:tmpJson options:0 error:&error];
@@ -249,6 +235,7 @@
             [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
                 NSLog(@"requestReply: %@", requestReply);
+                [self performSegueWithIdentifier:@"AllPatients" sender:nil];
             }] resume];
     }
 }
