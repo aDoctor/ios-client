@@ -228,14 +228,15 @@
         NSError *error;
         NSData *postData = [NSJSONSerialization dataWithJSONObject:tmpJson options:0 error:&error];
         NSLog(@"postData = %@", postData);
-        
         [request setHTTPBody:postData];
+        
+        [self performSegueWithIdentifier:@"AllPatients" sender:nil];
         
         NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
             [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
                 NSLog(@"requestReply: %@", requestReply);
-                [self performSegueWithIdentifier:@"AllPatients" sender:nil];
+                
             }] resume];
     }
 }

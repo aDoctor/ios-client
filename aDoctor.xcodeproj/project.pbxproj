@@ -320,7 +320,7 @@
 				TargetAttributes = {
 					822586781D88C31D0047C716 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = PN5D3T49DB;
+						DevelopmentTeam = FA6Q7EXUXC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -514,7 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PN5D3T49DB;
+				DEVELOPMENT_TEAM = FA6Q7EXUXC;
 				INFOPLIST_FILE = aDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diskander.aDoctor;
@@ -527,7 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PN5D3T49DB;
+				DEVELOPMENT_TEAM = FA6Q7EXUXC;
 				INFOPLIST_FILE = aDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = diskander.aDoctor;

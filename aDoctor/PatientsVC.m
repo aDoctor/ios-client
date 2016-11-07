@@ -16,6 +16,11 @@
 @property NSMutableArray *patientsInsuranceArray;
 @property NSMutableArray *patientsAgeArray;
 @property NSMutableArray *patientsGenderArray;
+@property NSString *age;
+@property (nonatomic) NSInteger currentYear;
+@property (nonatomic) NSInteger currentMonth;
+@property (nonatomic) NSInteger currentDate;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -23,12 +28,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.activityIndicator startAnimating];
     
     //Get patients
     self.patientsArray = [NSMutableArray new];
     self.patientsAgeArray = [NSMutableArray new];
     self.patientsInsuranceArray = [NSMutableArray new];
     self.patientsGenderArray = [NSMutableArray new];
+    
+    
+    NSDate *currentDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    NSString *currentDateString = [dateFormatter stringFromDate:currentDate];
+    
+    NSArray<NSString *> *components = [currentDateString componentsSeparatedByString:@"-"];
+    self.currentYear = components.firstObject.integerValue;
+    self.currentMonth = components[1].integerValue;
+    self.currentDate = components[2].integerValue;
+    
     
     [self getPatientsDate];
 
@@ -53,17 +71,30 @@
             NSString *lastName = [diction objectForKey:@"lastName"];
             NSString *name = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
             
-            NSString *gender = [diction objectForKey:@"gender"];
+            NSString *gender = [NSString new];
+            if ([[diction objectForKey:@"gender"]  isEqual: @"1"]) {
+                gender = @"Female";
+            }else{
+                gender = @"Male";
+            }
+            
+            //Calculating age from DOB
+            [self calculateAge:[diction objectForKey:@"birthdate"]];
+            NSString *age = [NSString stringWithFormat:@"%@ yrs",self.age];
+
+            
             NSString *insurance = [diction objectForKey:@"_insurancePlanID"];
-            NSString *dob = [diction objectForKey:@"birthdate"];
             
             [self.patientsArray addObject:name];
             [self.patientsGenderArray addObject:gender];
             [self.patientsInsuranceArray addObject:insurance];
-            [self.patientsAgeArray addObject:dob];
+            [self.patientsAgeArray addObject:age];
             
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+
             NSLog(@"%@",diction);
-            [self.tableView reloadData];
         }
 
     }] resume];
@@ -79,8 +110,16 @@
     //cell.patientImage.image = [self.patients
     cell.profileName.text = [self.patientsArray objectAtIndex:indexPath.row];
     cell.profileDetails.text = [NSString stringWithFormat:@"%@ | %@ | %@", [self.patientsGenderArray objectAtIndex:indexPath.row], [self.patientsAgeArray objectAtIndex:indexPath.row], [self.patientsInsuranceArray objectAtIndex:indexPath.row]];
-    //[self.tableView reloadData];
     return cell;
+}
+
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([indexPath isEqual:((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject])]){
+        //end of loading
+        [self.activityIndicator stopAnimating];
+        
+    }
 }
 
 
@@ -103,6 +142,40 @@
     }
 }
 
+- (void)calculateAge:(NSString *)dateOfBirth {
+    
+    NSArray<NSString *> *dateOfBirthComponents = [dateOfBirth componentsSeparatedByString:@"-"];
+    
+    NSInteger birthYear = dateOfBirthComponents.firstObject.integerValue;
+    NSInteger birthMonth = dateOfBirthComponents[1].integerValue;
+    
+    NSInteger finalAge;
+    NSInteger preliminaryAge = self.currentYear - birthYear;
+    
+    NSInteger monthDifference = self.currentMonth - birthMonth;
+    if (monthDifference > 0) {
+        finalAge = preliminaryAge;
+    } else if (monthDifference == 0) {
+        NSInteger birthDate = dateOfBirthComponents[2].integerValue;
+        NSInteger dateDifference = self.currentDate - birthDate;
+        
+        if (dateDifference > 0) {
+            finalAge = preliminaryAge;
+        } else if (dateDifference == 0) {
+            finalAge = preliminaryAge;
+        } else {
+            finalAge = preliminaryAge - 1;
+        }
+    } else {
+        finalAge = preliminaryAge - 1;
+    }
+    
+    self.age = [NSString stringWithFormat:@"%li", (long)finalAge];
+    
+    
+    
+
+}
 
 
 
